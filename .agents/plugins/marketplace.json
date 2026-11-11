@@ -1,0 +1,20 @@
+{
+  "name": "clickruntime",
+  "interface": {
+    "displayName": "ClickRuntime"
+  },
+  "plugins": [
+    {
+      "name": "clickruntime",
+      "source": {
+        "source": "local",
+        "path": "./plugins/clickruntime"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

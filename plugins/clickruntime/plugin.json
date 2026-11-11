@@ -1,0 +1,66 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "clickruntime",
+  "version": "1.0.0",
+  "description": "Build and run automations that connect your apps, from your AI assistant. Describe what should happen and when. The assistant writes a Python script, deploys and tests it, and ClickRuntime runs it on a schedule or when a webhook arrives, calling any app with an API.",
+  "author": {
+    "name": "Imarti Creations Private Limited",
+    "email": "hello@clickruntime.com",
+    "url": "https://clickruntime.com"
+  },
+  "homepage": "https://clickruntime.com",
+  "repository": "https://github.com/clickruntime/agent-plugins",
+  "license": "MIT",
+  "keywords": [
+    "automation",
+    "build an automation",
+    "workflow automation",
+    "integrate apps",
+    "connect apps",
+    "sync data between apps",
+    "API integration",
+    "webhook",
+    "form submission",
+    "scheduled job",
+    "cron",
+    "monitor",
+    "alert",
+    "AI classification",
+    "summarize",
+    "extract data",
+    "run Python"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "ClickRuntime",
+        "shortDescription": "Build and run app automations",
+        "longDescription": "ClickRuntime builds and runs automations from your AI assistant. Describe what should happen, when, and where the result should go. The assistant writes the automation as a Python script, deploys it to ClickRuntime, runs a test and fixes errors until a run succeeds. ClickRuntime then runs it on its own servers after the chat ends.\n\nUse it when the person wants work to keep happening without them:\n- Connect apps: when something happens in one app, update others. For example, a form submission becomes a row in Airtable and a Slack message.\n- Run on a schedule: every few minutes, hourly, daily, or at set times such as weekdays at 9am in a chosen time zone.\n- React to webhooks from Stripe, Shopify, GitHub, Tally, Typeform or any service that can send one.\n- Call any app or API, including internal APIs, web pages and RSS feeds. Slack, Google Sheets, Gmail and Calendar connect with sign-in; other apps use a key saved in the ClickRuntime dashboard.\n- Run multi-step logic in code: fetch, filter, branch, transform, and write to several apps in one run.\n- Use a built-in AI model to classify, summarize or extract from text, with no AI key.\n- Keep state between runs, to handle only new items, alert only on change or keep running totals.\n\nEach automation is managed from the chat: check runs, get a failed run explained and fixed, change, pause or delete it. Scripts run in isolated runners. Keys are encrypted, write-only and masked in logs, and never pass through the chat. Every run is logged, and failures send an email alert.\n\nIt does not move money, place trades or make purchases, and it is not needed for reminders that only appear in the chat.\n\nExample automations:\n- When a Tally form is submitted, classify the message as spam or not with AI and add a row to Airtable.\n- When a Stripe payment succeeds, add a row to a Google Sheet and post the amount to Slack.\n- When a Shopify order arrives, look up the customer in HubSpot, tag VIPs and notify the team.\n- Every hour, check a pricing page and email me only if the price changed.\n- Every morning, summarize new GitHub issues I have not seen and send a digest to Slack.\n- Label each new support email as billing, bug or other, and post the billing ones to Slack.",
+        "developerName": "Imarti Creations Private Limited",
+        "category": "Productivity",
+        "capabilities": [
+          "Build automations that connect apps and sync data between them",
+          "Run automations on a schedule or when a webhook arrives",
+          "Call any app or API, with keys stored outside the chat",
+          "Classify, summarize or extract text with built-in AI",
+          "Keep state between runs for new-item handling and change alerts",
+          "Test, fix, pause and monitor automations from the chat"
+        ],
+        "websiteURL": "https://clickruntime.com",
+        "supportURL": "https://clickruntime.com/support",
+        "privacyPolicyURL": "https://clickruntime.com/privacy",
+        "termsOfServiceURL": "https://clickruntime.com/terms",
+        "defaultPrompt": [
+          "When my form gets a submission, classify it as spam or not and add it to Airtable.",
+          "When a Stripe payment succeeds, add a row to my sheet and post it to Slack.",
+          "Every hour, check my competitor's pricing page and email me if they change their price."
+        ],
+        "brandColor": "#B8226C",
+        "brandColorDark": "#FF4FA3",
+        "composerIcon": "./assets/composer-icon.png",
+        "logo": "./assets/logo.png"
+      },
+      "onboardingSkill": "./skills/get-started/SKILL.md"
+    }
+  }
+}
